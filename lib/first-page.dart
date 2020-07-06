@@ -12,7 +12,7 @@ class MyAppBar extends StatelessWidget {
     return Container(
       height: 56.0, // in logical pixels
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      decoration: BoxDecoration(color: Colors.blue[500]),
+      decoration: BoxDecoration(color: Colors.pink[500]),
       // Row is a horizontal, linear layout.
       child: Row(
         // <Widget> is the type of items in the list.
@@ -47,13 +47,13 @@ class MyScaffold extends StatelessWidget {
         children: <Widget>[
           MyAppBar(
             title: Text(
-              'Example title',
+              'Rehears',
               style: Theme.of(context).primaryTextTheme.headline,
             ),
           ),
           Expanded(
             child: Center(
-              child: Text('Hello, world!'),
+              child: Text('this is title'),
             ),
           ),
         ],
