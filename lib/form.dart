@@ -54,6 +54,17 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               return null;
             },
           ),
+          TextFormField(
+            decoration: const InputDecoration(
+              hintText: 'Enter your password',
+            ),
+            validator: (value) {
+              if (value.isEmpty) {
+                return 'Please enter your password';
+              }
+              return null;
+            },
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16.0),
             child: RaisedButton(
