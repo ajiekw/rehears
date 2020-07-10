@@ -78,7 +78,12 @@ class MyApp extends StatelessWidget {
         ),
         body: Column(
           children: <Widget>[
-            Image.asset('images/a_dot_burr.jpeg'),
+            Image.asset(
+              'images/a_dot_burr.jpeg',
+              width: 600,
+              height: 240,
+              fit: BoxFit.cover,
+            ),
             titleSection,
             buttonSection,
             textSection
