@@ -70,18 +70,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'flutter layout demo',
       theme: ThemeData(
-        primarySwatch: Colors.pink[300],
+        primarySwatch: Colors.green,
       ),
       home: Scaffold(
         appBar: AppBar(
           title: Text('why should i trust you?'),
         ),
-        body: Column(
+        body: ListView(
           children: <Widget>[
             Image.asset(
-              'images/a_dot_burr.jpeg',
+              'images/illu1.jpg',
               width: 600,
-              height: 240,
+              height: 400,
               fit: BoxFit.cover,
             ),
             titleSection,
