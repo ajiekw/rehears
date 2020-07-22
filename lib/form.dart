@@ -50,11 +50,22 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         children: <Widget>[
           TextFormField(
             decoration: const InputDecoration(
-              hintText: 'Enter your email',
+              hintText: 'Email',
             ),
             validator: (value) {
               if (value.isEmpty) {
                 return 'Please enter some text';
+              }
+              return null;
+            },
+          ),
+          TextFormField(
+            decoration: const InputDecoration(
+              hintText: 'Password',
+            ),
+            validator: (value) {
+              if (value.isEmpty) {
+                return 'Password is empty';
               }
               return null;
             },
@@ -69,7 +80,10 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   // Process data.
                 }
               },
-              child: Text('Submit'),
+              child: Padding(
+                padding: const EdgeInsets.all(15),
+                child: Center(child: Text('Submit')),
+              ),
             ),
           ),
         ],
