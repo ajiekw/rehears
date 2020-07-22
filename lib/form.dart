@@ -10,6 +10,8 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
 
+const backgroundcolor = Color(0xFFDD835);
+
 /// This Widget is the main application widget.
 class MyApp extends StatelessWidget {
   static const String _title = 'Register';
@@ -20,10 +22,10 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text(_title),
-          backgroundColor: Colors.yellow[800],
+          backgroundColor: Colors.yellow[700],
         ),
         body: MyStatefulWidget(),
-        backgroundColor: Colors.yellow[800],
+        backgroundColor: Colors.yellow[700],
       ),
     );
   }
