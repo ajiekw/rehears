@@ -46,46 +46,30 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     return Form(
       key: _formKey,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          TextFormField(
-            decoration: const InputDecoration(
-              hintText: 'Email',
-            ),
-            validator: (value) {
-              if (value.isEmpty) {
-                return 'Please enter some text';
-              }
-              return null;
-            },
-          ),
-          TextFormField(
-            decoration: const InputDecoration(
-              hintText: 'Password',
-            ),
-            validator: (value) {
-              if (value.isEmpty) {
-                return 'Password is empty';
-              }
-              return null;
-            },
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16.0),
-            child: RaisedButton(
-              onPressed: () {
-                // Validate will return true if the form is valid, or false if
-                // the form is invalid.
-                if (_formKey.currentState.validate()) {
-                  // Process data.
-                }
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(15),
-                child: Center(child: Text('Submit')),
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 20),
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(29.5)),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "Username",
+                border: InputBorder.none,
               ),
             ),
           ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+            decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(29.5)),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "Password",
+                border: InputBorder.none,
+              ),
+            ),
+          )
         ],
       ),
     );
