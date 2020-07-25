@@ -14,7 +14,7 @@ const backgroundcolor = Color(0xFFDD835);
 
 /// This Widget is the main application widget.
 class MyApp extends StatelessWidget {
-  static const String _title = 'Register';
+  static const String _title = 'Login';
 
   @override
   Widget build(BuildContext context) {
@@ -24,54 +24,57 @@ class MyApp extends StatelessWidget {
           title: const Text(_title),
           backgroundColor: Colors.yellow[700],
         ),
-        body: MyStatefulWidget(),
+        body: Body(),
         backgroundColor: Colors.yellow[700],
       ),
     );
   }
 }
 
-class MyStatefulWidget extends StatefulWidget {
-  MyStatefulWidget({Key key}) : super(key: key);
-
-  @override
-  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
-}
-
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  final _formKey = GlobalKey<FormState>();
-
+class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: _formKey,
-      child: Column(
-        children: <Widget>[
-          Container(
-            margin: EdgeInsets.symmetric(vertical: 20),
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-            decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(29.5)),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: "Username",
-                border: InputBorder.none,
-              ),
+    return Column(
+      children: <Widget>[
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(29.5)),
+          child: TextField(
+            decoration: InputDecoration(
+              hintText: "Username",
+              border: InputBorder.none,
             ),
           ),
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-            decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(29.5)),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: "Password",
-                border: InputBorder.none,
-              ),
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 30),
+          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(29.5)),
+          child: TextField(
+            decoration: InputDecoration(
+              hintText: "Password",
+              border: InputBorder.none,
             ),
-          )
-        ],
-      ),
+          ),
+        ),
+        Container(
+          padding: EdgeInsets.symmetric(vertical: 30),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(29),
+            child: FlatButton(
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                color: Colors.deepPurple[900],
+                onPressed: () {},
+                child: Text(
+                  "Login",
+                  style: TextStyle(color: Colors.white),
+                )),
+          ),
+        )
+      ],
     );
   }
 }
