@@ -40,7 +40,15 @@ class Body extends StatelessWidget {
           margin: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
           padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(29.5)),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(29.5),
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 1,
+                    blurRadius: 9,
+                    offset: Offset(-4, 6))
+              ]),
           child: TextField(
             decoration: InputDecoration(
               hintText: "Username",
@@ -52,7 +60,15 @@ class Body extends StatelessWidget {
           margin: EdgeInsets.symmetric(horizontal: 30),
           padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
           decoration: BoxDecoration(
-              color: Colors.white, borderRadius: BorderRadius.circular(29.5)),
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(29.5),
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 1,
+                    blurRadius: 9,
+                    offset: Offset(-4, 6))
+              ]),
           child: TextField(
             decoration: InputDecoration(
               hintText: "Password",
