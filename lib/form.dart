@@ -14,16 +14,10 @@ const backgroundcolor = Color(0xFFDD835);
 
 /// This Widget is the main application widget.
 class MyApp extends StatelessWidget {
-  static const String _title = 'Login';
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text(_title),
-          backgroundColor: Colors.yellow[700],
-        ),
         body: Body(),
         backgroundColor: Colors.yellow[700],
       ),
@@ -34,63 +28,88 @@ class MyApp extends StatelessWidget {
 class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Container(
-          margin: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(29.5),
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    spreadRadius: 1,
-                    blurRadius: 9,
-                    offset: Offset(-4, 6))
-              ]),
-          child: TextField(
-            decoration: InputDecoration(
-              hintText: "Username",
-              border: InputBorder.none,
+    return Padding(
+      padding: const EdgeInsets.only(top: 100.0),
+      child: Column(
+        children: <Widget>[
+          Container(
+            child: Text(
+              "Login",
+              style: TextStyle(color: Colors.white, fontSize: 40),
             ),
           ),
-        ),
-        Container(
-          margin: EdgeInsets.symmetric(horizontal: 30),
-          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(29.5),
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    spreadRadius: 1,
-                    blurRadius: 9,
-                    offset: Offset(-4, 6))
-              ]),
-          child: TextField(
-            decoration: InputDecoration(
-              hintText: "Password",
-              border: InputBorder.none,
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(29.5),
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 1,
+                      blurRadius: 9,
+                      offset: Offset(-4, 6))
+                ]),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "Username",
+                border: InputBorder.none,
+              ),
             ),
           ),
-        ),
-        Container(
-          padding: EdgeInsets.symmetric(vertical: 30),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(29),
-            child: FlatButton(
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-                color: Colors.deepPurple[900],
-                onPressed: () {},
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 30),
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(29.5),
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 1,
+                      blurRadius: 9,
+                      offset: Offset(-4, 6))
+                ]),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "Password",
+                border: InputBorder.none,
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 40),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(29),
+              child: FlatButton(
+                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                  color: Colors.deepPurple[900],
+                  onPressed: () {},
+                  child: Text(
+                    "Login",
+                    style: TextStyle(color: Colors.white),
+                  )),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 100),
+            child: Container(
                 child: Text(
-                  "Login",
-                  style: TextStyle(color: Colors.white),
-                )),
+              "Doesn't have an account yet?",
+              style: TextStyle(color: Colors.deepPurple[900]),
+            )),
           ),
-        )
-      ],
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: Container(
+                child: Text(
+              "Forget Password",
+              style: TextStyle(color: Colors.deepPurple[900]),
+            )),
+          ),
+        ],
+      ),
     );
   }
 }
