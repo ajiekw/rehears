@@ -1,70 +1,84 @@
+// Flutter code sample for Form
+
+// This example shows a [Form] with one [TextFormField] to enter an email
+// address and a [RaisedButton] to submit the form. A [GlobalKey] is used here
+// to identify the [Form] and validate input.
+//
+// ![](https://flutter.github.io/assets-for-api-docs/assets/widgets/form.png)
+
 import 'package:flutter/material.dart';
 
-class MyAppBar extends StatelessWidget {
-  MyAppBar({this.title});
+void main() => runApp(MyApp());
 
-  // Fields in a Widget subclass are always marked "final".
-
-  final Widget title;
-
+/// This Widget is the main application widget.
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 56.0, // in logical pixels
-      padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      decoration: BoxDecoration(color: Colors.blue[500]),
-      // Row is a horizontal, linear layout.
-      child: Row(
-        // <Widget> is the type of items in the list.
-        children: <Widget>[
-          IconButton(
-            icon: Icon(Icons.menu),
-            tooltip: 'Navigation menu',
-            onPressed: null, // null disables the button
-          ),
-          // Expanded expands its child to fill the available space.
-          Expanded(
-            child: title,
-          ),
-          IconButton(
-            icon: Icon(Icons.search),
-            tooltip: 'Search',
-            onPressed: null,
-          ),
-        ],
+    return MaterialApp(
+      home: Scaffold(
+        body: Body(),
+        backgroundColor: Colors.yellow[700],
       ),
     );
   }
 }
 
-class MyScaffold extends StatelessWidget {
+class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Material is a conceptual piece of paper on which the UI appears.
-    return Material(
-      // Column is a vertical, linear layout.
+    Size size = MediaQuery.of(context).size;
+    return Container(
       child: Column(
         children: <Widget>[
-          MyAppBar(
-            title: Text(
-              'Example title',
-              style: Theme.of(context).primaryTextTheme.headline,
+          Container(
+            padding: EdgeInsets.only(top: 100),
+            child: Text(
+              "Welcome!",
+              style: TextStyle(color: Colors.white, fontSize: 40),
             ),
           ),
-          Expanded(
-            child: Center(
-              child: Text('Hello, world!'),
+          Container(
+            padding: const EdgeInsets.only(top: 50),
+            child: Image.asset(
+              'assets/images/welcome-illu2.png',
+              scale: 1,
             ),
           ),
+          Container(
+            padding: EdgeInsets.only(top: 30),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(29),
+              child: RaisedButton(
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 80),
+                onPressed: () {},
+                color: Colors.deepPurple[900],
+                child: Text(
+                  "Create an account",
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+              ),
+            ),
+          ),
+          Column(
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.only(top: 100, left: 10),
+                child: Text(
+                  "Already Have an account?",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(top: 100, left: 5),
+                child: Text(
+                  "Login",
+                  style: TextStyle(color: Colors.deepPurple[900]),
+                ),
+              )
+            ],
+          )
         ],
       ),
     );
   }
-}
-
-void main() {
-  runApp(MaterialApp(
-    title: 'My app', // used by the OS task switcher
-    home: MyScaffold(),
-  ));
 }
