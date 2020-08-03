@@ -50,7 +50,9 @@ class Body extends StatelessWidget {
               borderRadius: BorderRadius.circular(29),
               child: RaisedButton(
                 padding: EdgeInsets.symmetric(vertical: 20, horizontal: 80),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(_createRoute());
+                },
                 color: Colors.deepPurple[900],
                 child: Text(
                   "Create an account",
@@ -59,10 +61,10 @@ class Body extends StatelessWidget {
               ),
             ),
           ),
-          Column(
+          Row(
             children: <Widget>[
               Container(
-                padding: EdgeInsets.only(top: 100, left: 10),
+                padding: EdgeInsets.only(top: 100, left: 85),
                 child: Text(
                   "Already Have an account?",
                   style: TextStyle(color: Colors.white),
@@ -71,13 +73,38 @@ class Body extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(top: 100, left: 5),
                 child: Text(
-                  "Login",
+                  "Log in",
                   style: TextStyle(color: Colors.deepPurple[900]),
                 ),
               )
             ],
           )
         ],
+      ),
+    );
+  }
+}
+
+Route _createRoute() {
+  return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => Login(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        var begin = Offset(0.0, 1.0);
+        var end = Offset.zero;
+        var curve = Curves.ease;
+
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        return SlideTransition(position: animation.drive(tween), child: child);
+      });
+}
+
+class Login extends StatelessWidget {
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Text('login'),
       ),
     );
   }
