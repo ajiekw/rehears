@@ -7,11 +7,13 @@
 // ![](https://flutter.github.io/assets-for-api-docs/assets/widgets/form.png)
 
 import 'package:flutter/material.dart';
+import 'register-form.dart';
+import 'login.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(LandingPage());
 
 /// This Widget is the main application widget.
-class MyApp extends StatelessWidget {
+class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -72,9 +74,16 @@ class Body extends StatelessWidget {
               ),
               Container(
                 padding: EdgeInsets.only(top: 100, left: 5),
-                child: Text(
-                  "Log in",
-                  style: TextStyle(color: Colors.deepPurple[900]),
+                child: GestureDetector(
+                  child: Text(
+                    "Log in",
+                    style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        color: Colors.deepPurple[900]),
+                  ),
+                  onTap: () {
+                    Navigator.of(context).push(toLogin());
+                  },
                 ),
               )
             ],
@@ -87,7 +96,7 @@ class Body extends StatelessWidget {
 
 Route _createRoute() {
   return PageRouteBuilder(
-      pageBuilder: (context, animation, secondaryAnimation) => Login(),
+      pageBuilder: (context, animation, secondaryAnimation) => Register(),
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
         var begin = Offset(0.0, 1.0);
         var end = Offset.zero;
@@ -100,12 +109,17 @@ Route _createRoute() {
       });
 }
 
-class Login extends StatelessWidget {
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text('login'),
-      ),
-    );
-  }
+Route toLogin() {
+  return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => Login(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        var begin = Offset(0.0, 1.0);
+        var end = Offset.zero;
+        var curve = Curves.ease;
+
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        return SlideTransition(position: animation.drive(tween), child: child);
+      });
 }
