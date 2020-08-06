@@ -8,22 +8,22 @@
 
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(Login());
 
 /// This Widget is the main application widget.
-class MyApp extends StatelessWidget {
+class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Body(),
+        body: loginBody(),
         backgroundColor: Colors.yellow[700],
       ),
     );
   }
 }
 
-class Body extends StatelessWidget {
+class loginBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
