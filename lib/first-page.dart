@@ -42,24 +42,25 @@ class Body extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(top: 50),
             child: Image.asset(
-              'assets/images/welcome-illu2.png',
+              'assets/images/welcome-illu3.png',
               scale: 1,
             ),
           ),
           Container(
             padding: EdgeInsets.only(top: 30),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(29),
-              child: RaisedButton(
-                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 80),
-                onPressed: () {
-                  Navigator.of(context).push(_createRoute());
-                },
-                color: Colors.deepPurple[900],
-                child: Text(
-                  "Create an account",
-                  style: TextStyle(color: Colors.white, fontSize: 20),
-                ),
+            child: RaisedButton(
+              elevation: 15.0,
+              shape: RoundedRectangleBorder(
+                borderRadius: new BorderRadius.circular(29.0),
+              ),
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 80),
+              onPressed: () {
+                Navigator.of(context).push(_createRoute());
+              },
+              color: Colors.deepPurple[900],
+              child: Text(
+                "Create an account",
+                style: TextStyle(color: Colors.white, fontSize: 20),
               ),
             ),
           ),
