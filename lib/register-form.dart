@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'first-page.dart';
 
 void main() => runApp(Register());
 
@@ -7,14 +8,14 @@ class Register extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Body(),
+        body: RegisterBody(),
         backgroundColor: Colors.yellow[700],
       ),
     );
   }
 }
 
-class Body extends StatelessWidget {
+class RegisterBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -114,7 +115,7 @@ class Body extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(29),
-                  child: FlatButton(
+                  child: RaisedButton(
                       padding:
                           EdgeInsets.symmetric(vertical: 20, horizontal: 30),
                       color: Colors.deepPurple[900],
@@ -129,11 +130,13 @@ class Body extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(29),
-                  child: FlatButton(
+                  child: RaisedButton(
                       padding:
                           EdgeInsets.symmetric(vertical: 20, horizontal: 35),
                       color: Colors.deepPurple[900],
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(cancelRoute());
+                      },
                       child: Text(
                         "Cancel",
                         style: TextStyle(color: Colors.white),
@@ -146,4 +149,19 @@ class Body extends StatelessWidget {
       ),
     );
   }
+}
+
+Route cancelRoute() {
+  return PageRouteBuilder(
+      pageBuilder: (context, animation, secondaryAnimation) => LandingPage(),
+      transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        var begin = Offset(-1, 0);
+        var end = Offset.zero;
+        var curve = Curves.ease;
+
+        var tween =
+            Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
+
+        return SlideTransition(position: animation.drive(tween), child: child);
+      });
 }

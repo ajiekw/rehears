@@ -74,16 +74,16 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('why should i trust you?'),
+          title: Text('Rehearsing App'),
         ),
         body: ListView(
           children: <Widget>[
-            Image.asset(
-              'images/illu1.jpg',
-              width: 600,
-              height: 400,
-              fit: BoxFit.cover,
-            ),
+            // Image.asset(
+            //   'images/illu1.jpg',
+            //   width: 600,
+            //   height: 400,
+            //   fit: BoxFit.cover,
+            // ),
             titleSection,
             buttonSection,
             textSection
