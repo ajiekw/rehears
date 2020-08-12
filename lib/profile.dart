@@ -17,13 +17,21 @@ class Profile extends StatelessWidget {
 class ProfileBody extends StatelessWidget {
   @override
   Widget build(BuildContext) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
-        child: Text(
-          "Profile",
-          style: TextStyle(color: Colors.black),
-        ),
+    return Container(
+      padding: EdgeInsets.only(left: 110, top: 50),
+      child: Column(
+        children: <Widget>[
+          Icon(
+            Icons.face,
+            color: Colors.black,
+            size: 98.0,
+            semanticLabel: "Profile",
+          ),
+          Text(
+            "John Doe",
+            style: TextStyle(color: Colors.black, fontSize: 36),
+          ),
+        ],
       ),
     );
   }
