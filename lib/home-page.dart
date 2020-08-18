@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'rehears-data.dart';
 
 void main() => runApp(HomeApp());
 
@@ -15,6 +16,8 @@ class HomeApp extends StatelessWidget {
 }
 
 class HomeBody extends StatelessWidget {
+  // var Data = RehearsData.getData;
+
   @override
   Widget build(BuildContext) {
     return Container(
@@ -57,4 +60,20 @@ class HomeBody extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget rehearsDay(data) {
+  return Align(
+    alignment: Alignment.centerLeft,
+    child: RichText(
+      text: TextSpan(
+        text: '${data['name']}',
+        style: TextStyle(
+          color: Colors.amber,
+          fontSize: 15,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ),
+  );
 }
