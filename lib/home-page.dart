@@ -16,8 +16,6 @@ class HomeApp extends StatelessWidget {
 }
 
 class HomeBody extends StatelessWidget {
-  // var Data = RehearsData.getData;
-
   @override
   Widget build(BuildContext) {
     return Container(
@@ -60,20 +58,33 @@ class HomeBody extends StatelessWidget {
       ),
     );
   }
-}
 
-Widget rehearsDay(data) {
-  return Align(
-    alignment: Alignment.centerLeft,
-    child: RichText(
-      text: TextSpan(
-        text: '${data['name']}',
-        style: TextStyle(
-          color: Colors.amber,
-          fontSize: 15,
-          fontWeight: FontWeight.bold,
+  Widget rehearsDay(data) {
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: RichText(
+        text: TextSpan(
+          text: 'Day One',
+          style: TextStyle(
+            color: Colors.amber,
+            fontSize: 15,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
-    ),
-  );
+    );
+  }
+
+  Widget DailyText() {}
+
+  Widget changeIcon() {
+    return Align(
+      alignment: Alignment.topRight,
+      child: Icon(
+        Icons.check_box,
+        color: Colors.orange,
+        size: 30,
+      ),
+    );
+  }
 }
