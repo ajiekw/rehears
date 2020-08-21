@@ -23,6 +23,7 @@ class Login extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class loginBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

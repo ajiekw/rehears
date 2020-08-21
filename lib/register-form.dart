@@ -113,35 +113,35 @@ class RegisterBody extends StatelessWidget {
             children: <Widget>[
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(29),
-                  child: RaisedButton(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-                      color: Colors.deepPurple[900],
-                      onPressed: () {},
-                      child: Text(
-                        "Register",
-                        style: TextStyle(color: Colors.white),
-                      )),
-                ),
+                child: RaisedButton(
+                    elevation: 10.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(29.0),
+                    ),
+                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+                    color: Colors.deepPurple[900],
+                    onPressed: () {},
+                    child: Text(
+                      "Register",
+                      style: TextStyle(color: Colors.white),
+                    )),
               ),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 20),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(29),
-                  child: RaisedButton(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 20, horizontal: 35),
-                      color: Colors.deepPurple[900],
-                      onPressed: () {
-                        Navigator.of(context).push(cancelRoute());
-                      },
-                      child: Text(
-                        "Cancel",
-                        style: TextStyle(color: Colors.white),
-                      )),
-                ),
+                child: RaisedButton(
+                    elevation: 10.0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(29.0),
+                    ),
+                    padding: EdgeInsets.symmetric(vertical: 20, horizontal: 35),
+                    color: Colors.deepPurple[900],
+                    onPressed: () {
+                      Navigator.of(context).push(cancelRoute());
+                    },
+                    child: Text(
+                      "Cancel",
+                      style: TextStyle(color: Colors.white),
+                    )),
               ),
             ],
           ),

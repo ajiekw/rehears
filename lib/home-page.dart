@@ -36,15 +36,17 @@ class HomeBody extends StatelessWidget {
                       children: <Widget>[
                         Padding(
                           padding: const EdgeInsets.only(left: 1.0),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Daily Excercise",
-                              style: TextStyle(
-                                color: Colors.blue[300],
-                                fontSize: 15,
-                              ),
-                            ),
+                          child: Column(
+                            children: <Widget>[
+                              Row(
+                                children: <Widget>[
+                                  changeIcon(),
+                                  SizedBox(
+                                    height: 10,
+                                  )
+                                ],
+                              )
+                            ],
                           ),
                         )
                       ],
