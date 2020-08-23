@@ -43,7 +43,11 @@ class HomeBody extends StatelessWidget {
                                   changeIcon(),
                                   SizedBox(
                                     height: 10,
-                                  )
+                                  ),
+                                  DailyText(),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
                                 ],
                               )
                             ],
@@ -77,7 +81,18 @@ class HomeBody extends StatelessWidget {
     );
   }
 
-  Widget DailyText() {}
+  Widget DailyText() {
+    return Align(
+      alignment: Alignment.topLeft,
+      child: Text(
+        "Daily Exercise",
+        style: TextStyle(
+          color: Colors.amber,
+          fontSize: 20,
+        ),
+      ),
+    );
+  }
 
   Widget changeIcon() {
     return Align(
