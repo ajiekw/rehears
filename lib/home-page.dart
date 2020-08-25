@@ -51,12 +51,28 @@ class HomeBody extends StatelessWidget {
                               SizedBox(
                                 height: 10,
                               ),
+                            ],
+                          ),
+                          Row(
+                            children: <Widget>[
                               UserExp(),
                               SizedBox(
                                 height: 20,
-                              )
+                              ),
+                              ExpNumber(),
+                              SizedBox(
+                                height: 20,
+                              ),
                             ],
-                          )
+                          ),
+                          Row(
+                            children: <Widget>[
+                              FootNote(),
+                              SizedBox(
+                                height: 20,
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     )
@@ -71,50 +87,89 @@ class HomeBody extends StatelessWidget {
   }
 
   Widget changeIcon() {
-    return Align(
-      alignment: Alignment.topRight,
-      child: Icon(
-        Icons.check_box,
-        color: Colors.green,
-        size: 30,
+    return Container(
+      child: Align(
+        alignment: Alignment.topRight,
+        child: Icon(
+          Icons.check_box,
+          color: Colors.green,
+          size: 30,
+        ),
       ),
     );
   }
 
   Widget rehearsDay() {
-    return Align(
-      alignment: Alignment.centerLeft,
-      child: Text(
-        '(Day 1)',
-        style: TextStyle(
-          color: Colors.grey,
-          fontSize: 15,
+    return Container(
+      child: Align(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          '(Day 1)',
+          style: TextStyle(
+            color: Colors.grey,
+            fontSize: 15,
+          ),
         ),
       ),
     );
   }
 
   Widget DailyText() {
-    return Align(
-      alignment: Alignment.centerLeft,
-      child: Text(
-        "Daily Exercise",
-        style: TextStyle(
-          color: Colors.amber,
-          fontSize: 20,
+    return Container(
+      child: Align(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          "Daily Exercise",
+          style: TextStyle(
+            color: Colors.amber,
+            fontSize: 20,
+          ),
         ),
       ),
     );
   }
 
   Widget UserExp() {
-    return Align(
-      alignment: Alignment.topLeft,
-      child: Text(
-        "Exp",
-        style: TextStyle(
-          color: Colors.grey,
-          fontSize: 40,
+    return Container(
+      child: Align(
+        alignment: Alignment.topLeft,
+        child: Text(
+          "Exp: ",
+          style: TextStyle(
+            color: Colors.grey,
+            fontSize: 30,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget ExpNumber() {
+    return Container(
+      child: Align(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          "50",
+          style: TextStyle(
+            color: Colors.grey,
+            fontSize: 30,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget FootNote() {
+    return Container(
+      padding: EdgeInsets.only(top: 60),
+      child: Align(
+        alignment: Alignment.bottomLeft,
+        child: Text(
+          "a short description of what you did today",
+          style: TextStyle(
+              color: Colors.deepPurple,
+              fontSize: 12,
+              fontStyle: FontStyle.italic),
         ),
       ),
     );
