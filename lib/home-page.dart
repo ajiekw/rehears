@@ -51,6 +51,10 @@ class HomeBody extends StatelessWidget {
                               SizedBox(
                                 height: 10,
                               ),
+                              UserExp(),
+                              SizedBox(
+                                height: 20,
+                              )
                             ],
                           )
                         ],
@@ -103,7 +107,16 @@ class HomeBody extends StatelessWidget {
     );
   }
 
-  // Widget UserExp(){
-  //   return
-  // }
+  Widget UserExp() {
+    return Align(
+      alignment: Alignment.topLeft,
+      child: Text(
+        "Exp",
+        style: TextStyle(
+          color: Colors.grey,
+          fontSize: 40,
+        ),
+      ),
+    );
+  }
 }
