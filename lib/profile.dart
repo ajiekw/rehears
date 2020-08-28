@@ -36,3 +36,19 @@ class ProfileBody extends StatelessWidget {
     );
   }
 }
+
+class ProfileCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext) {
+    return Scaffold(
+      body: Container(
+        padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+        height: 220,
+        width: double.maxFinite,
+        child: Card(
+          elevation: 5,
+        ),
+      ),
+    );
+  }
+}
