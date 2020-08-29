@@ -39,13 +39,15 @@ class ProfileCard extends StatelessWidget {
   }
 }
 
-class ProfileName extends StatefulWidget {
+class ProfileText extends StatelessWidget {
   @override
   Widget build(BuildContext) {
-    return Text(
-      'John Doe',
-      style: TextStyle(
-        fontSize: 12,
+    return Container(
+      child: Text(
+        'John Doe',
+        style: TextStyle(
+          fontSize: 12,
+        ),
       ),
     );
   }
