@@ -18,21 +18,7 @@ class ProfileBody extends StatelessWidget {
   @override
   Widget build(BuildContext) {
     return Container(
-      padding: EdgeInsets.only(left: 110, top: 50),
-      child: Column(
-        children: <Widget>[
-          Icon(
-            Icons.face,
-            color: Colors.black,
-            size: 98.0,
-            semanticLabel: "Profile",
-          ),
-          Text(
-            "John Doe",
-            style: TextStyle(color: Colors.black, fontSize: 36),
-          ),
-        ],
-      ),
+      child: ProfileCard(),
     );
   }
 }
@@ -48,6 +34,18 @@ class ProfileCard extends StatelessWidget {
         child: Card(
           elevation: 5,
         ),
+      ),
+    );
+  }
+}
+
+class ProfileName extends StatefulWidget {
+  @override
+  Widget build(BuildContext) {
+    return Text(
+      'John Doe',
+      style: TextStyle(
+        fontSize: 12,
       ),
     );
   }
