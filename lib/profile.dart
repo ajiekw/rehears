@@ -17,8 +17,15 @@ class Profile extends StatelessWidget {
 class ProfileBody extends StatelessWidget {
   @override
   Widget build(BuildContext) {
-    return Container(
-      child: ProfileCard(),
+    return Column(
+      children: [
+        Container(
+          child: ProfileCard(),
+        ),
+        Container(
+          child: ProfileText(),
+        )
+      ],
     );
   }
 }
