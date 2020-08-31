@@ -22,6 +22,7 @@ class ProfileBody extends StatelessWidget {
         children: <Widget>[
           ProfileCard(),
           ProfileText(),
+          PhotoProfile(),
         ],
       ),
     );
@@ -33,8 +34,9 @@ class ProfileCard extends StatelessWidget {
   Widget build(BuildContext) {
     return Scaffold(
       body: Container(
+        margin: EdgeInsets.only(top: 220),
         padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-        height: 220,
+        height: 330,
         width: double.maxFinite,
         child: Card(
           elevation: 5,
@@ -48,12 +50,27 @@ class ProfileText extends StatelessWidget {
   @override
   Widget build(BuildContext) {
     return Container(
-      child: Text(
-        'John Doe',
-        style: TextStyle(
-          fontSize: 12,
+      padding: EdgeInsets.only(top: 40),
+      child: Align(
+        alignment: Alignment.topCenter,
+        child: Text(
+          'John Doe',
+          style: TextStyle(
+            fontSize: 36,
+          ),
         ),
       ),
+    );
+  }
+}
+
+class PhotoProfile extends StatelessWidget {
+  @override
+  Widget build(BuildContext) {
+    return Icon(
+      Icons.face,
+      color: Colors.amber,
+      size: 30,
     );
   }
 }
