@@ -36,7 +36,7 @@ class ProfileCard extends StatelessWidget {
       body: Container(
         margin: EdgeInsets.only(top: 220),
         padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-        height: 330,
+        height: 440,
         width: double.maxFinite,
         child: Card(
           elevation: 5,
@@ -67,10 +67,16 @@ class ProfileText extends StatelessWidget {
 class PhotoProfile extends StatelessWidget {
   @override
   Widget build(BuildContext) {
-    return Icon(
-      Icons.face,
-      color: Colors.amber,
-      size: 30,
+    return Container(
+      padding: EdgeInsets.only(top: 100),
+      child: Align(
+        alignment: Alignment.topCenter,
+        child: Icon(
+          Icons.face,
+          color: Colors.amber,
+          size: 90,
+        ),
+      ),
     );
   }
 }
