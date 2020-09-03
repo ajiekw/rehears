@@ -40,6 +40,28 @@ class ProfileCard extends StatelessWidget {
         width: double.maxFinite,
         child: Card(
           elevation: 5,
+          child: Padding(
+            padding: EdgeInsets.all(7),
+            child: Stack(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(left: 10, top: 5),
+                  child: Column(
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          ProfileText(),
+                          SizedBox(
+                            height: 10,
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
         ),
       ),
     );
