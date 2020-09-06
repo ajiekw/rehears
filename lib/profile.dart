@@ -50,7 +50,7 @@ class ProfileCard extends StatelessWidget {
                     children: <Widget>[
                       Row(
                         children: <Widget>[
-                          ProfileText(),
+                          ProfileContent(),
                           SizedBox(
                             height: 10,
                           )
@@ -82,6 +82,22 @@ class ProfileText extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class ProfileContent extends StatelessWidget {
+  @override
+  Widget build(BuildContext) {
+    return Column(
+      children: <Widget>[
+        Container(
+          child: Text("yuhuuuu"),
+        ),
+        Container(
+          child: Text("coba"),
+        ),
+      ],
     );
   }
 }
