@@ -1,11 +1,3 @@
-// Flutter code sample for Form
-
-// This example shows a [Form] with one [TextFormField] to enter an email
-// address and a [RaisedButton] to submit the form. A [GlobalKey] is used here
-// to identify the [Form] and validate input.
-//
-// ![](https://flutter.github.io/assets-for-api-docs/assets/widgets/form.png)
-
 import 'package:flutter/material.dart';
 
 void main() => runApp(Login());
