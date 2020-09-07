@@ -53,7 +53,7 @@ class ProfileCard extends StatelessWidget {
                           ProfileContent(),
                           SizedBox(
                             height: 10,
-                          )
+                          ),
                         ],
                       )
                     ],
@@ -90,12 +90,70 @@ class ProfileContent extends StatelessWidget {
   @override
   Widget build(BuildContext) {
     return Column(
-      children: <Widget>[
-        Container(
-          child: Text("yuhuuuu"),
+      children: [
+        Row(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.only(top: 20),
+              child: Icon(
+                Icons.android,
+                size: 30,
+                color: Colors.green,
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 20),
+              child: Text(
+                " An Android Prodigy",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 25),
+              child: Container(
+                child: Text(
+                  " 200 Exp",
+                  textAlign: TextAlign.right,
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+              ),
+            )
+          ],
         ),
-        Container(
-          child: Text("coba"),
+        Row(
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.only(top: 20),
+              child: Icon(
+                Icons.access_alarms,
+                size: 30,
+                color: Colors.red,
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 20),
+              child: Text(
+                " A Fast Learner",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 25),
+              child: Container(
+                child: Text(
+                  " 150 Exp",
+                  textAlign: TextAlign.right,
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+              ),
+            )
+          ],
         ),
       ],
     );
