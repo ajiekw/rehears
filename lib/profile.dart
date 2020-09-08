@@ -91,69 +91,67 @@ class ProfileContent extends StatelessWidget {
   Widget build(BuildContext) {
     return Column(
       children: [
-        Row(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(top: 20),
-              child: Icon(
-                Icons.android,
-                size: 30,
-                color: Colors.green,
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(top: 20),
-              child: Text(
-                " An Android Prodigy",
-                style: TextStyle(fontSize: 20),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(top: 25),
-              child: Container(
-                child: Text(
-                  " 200 Exp",
-                  textAlign: TextAlign.right,
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontStyle: FontStyle.italic,
-                  ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+          child: Row(
+            children: <Widget>[
+              Container(
+                child: Icon(
+                  Icons.android,
+                  size: 30,
+                  color: Colors.green,
                 ),
               ),
-            )
-          ],
+              Container(
+                child: Text(
+                  " An Android Prodigy",
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              Container(
+                child: Container(
+                  child: Text(
+                    " 200 Exp",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
-        Row(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(top: 20),
-              child: Icon(
-                Icons.access_alarms,
-                size: 30,
-                color: Colors.red,
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(top: 20),
-              child: Text(
-                " A Fast Learner",
-                style: TextStyle(fontSize: 20),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(top: 25),
-              child: Container(
-                child: Text(
-                  " 150 Exp",
-                  textAlign: TextAlign.right,
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontStyle: FontStyle.italic,
-                  ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(10, 10, 50, 10),
+          child: Row(
+            children: <Widget>[
+              Container(
+                child: Icon(
+                  Icons.access_alarms,
+                  size: 30,
+                  color: Colors.red,
                 ),
               ),
-            )
-          ],
+              Container(
+                child: Text(
+                  " A Fast Learner",
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              Container(
+                child: Container(
+                  child: Text(
+                    " 150 Exp",
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontStyle: FontStyle.italic,
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ],
     );
