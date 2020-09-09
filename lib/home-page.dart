@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'rehears-data.dart';
+import 'bottom-navigation.dart';
 
 void main() => runApp(HomeApp());
 

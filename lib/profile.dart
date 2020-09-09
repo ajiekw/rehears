@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rehears/home-page.dart';
+import 'bottom-navigation.dart';
 
 void main() => runApp(Profile());
 
@@ -33,6 +35,7 @@ class ProfileCard extends StatelessWidget {
   @override
   Widget build(BuildContext) {
     return Scaffold(
+      drawer: NavDrawer(),
       body: Container(
         margin: EdgeInsets.only(top: 220),
         padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
@@ -123,7 +126,7 @@ class ProfileContent extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(10, 10, 50, 10),
+          padding: const EdgeInsets.fromLTRB(10, 10, 55, 10),
           child: Row(
             children: <Widget>[
               Container(

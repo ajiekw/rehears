@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'profile.dart';
 import 'home-page.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(Navigation());
 
-class MyApp extends StatelessWidget {
+class Navigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,28 +24,30 @@ class MyStatefulWidget extends StatefulWidget {
 class NavDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Rehears'),
-        backgroundColor: Colors.amber,
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Rehears'),
-              decoration: BoxDecoration(
-                color: Colors.yellow[700],
+    return Container(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Rehears'),
+          backgroundColor: Colors.amber,
+        ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                child: Text('Rehears'),
+                decoration: BoxDecoration(
+                  color: Colors.yellow[700],
+                ),
               ),
-            ),
-            ListTile(
-              title: Text('Account'),
-            ),
-            ListTile(
-              title: Text('Setting'),
-            )
-          ],
+              ListTile(
+                title: Text('Account'),
+              ),
+              ListTile(
+                title: Text('Setting'),
+              )
+            ],
+          ),
         ),
       ),
     );
