@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'bottom-navigation.dart';
 
 void main() => runApp(HomeApp());
 
@@ -170,6 +169,37 @@ class HomeBody extends StatelessWidget {
               color: Colors.deepPurple,
               fontSize: 12,
               fontStyle: FontStyle.italic),
+        ),
+      ),
+    );
+  }
+}
+
+class NavDrawer extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Rehears'),
+        backgroundColor: Colors.amber,
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('Rehears'),
+              decoration: BoxDecoration(
+                color: Colors.yellow[700],
+              ),
+            ),
+            ListTile(
+              title: Text('Account'),
+            ),
+            ListTile(
+              title: Text('Setting'),
+            )
+          ],
         ),
       ),
     );

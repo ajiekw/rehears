@@ -9,52 +9,22 @@ class Navigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyStatefulWidget(),
-    );
-  }
-}
-
-class MyStatefulWidget extends StatefulWidget {
-  MyStatefulWidget({Key key}) : super(key: key);
-
-  @override
-  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
-}
-
-class NavDrawer extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text('Rehears'),
-          backgroundColor: Colors.amber,
-        ),
-        drawer: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              DrawerHeader(
-                child: Text('Rehears'),
-                decoration: BoxDecoration(
-                  color: Colors.yellow[700],
-                ),
-              ),
-              ListTile(
-                title: Text('Account'),
-              ),
-              ListTile(
-                title: Text('Setting'),
-              )
-            ],
-          ),
-        ),
+      home: Scaffold(
+        drawer: NavDrawer(),
+        body: BottNavigation(),
       ),
     );
   }
 }
 
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+class BottNavigation extends StatefulWidget {
+  BottNavigation({Key key}) : super(key: key);
+
+  @override
+  _BottNavigationState createState() => _BottNavigationState();
+}
+
+class _BottNavigationState extends State<BottNavigation> {
   int _selectedIndex = 0;
   final List<Widget> _children = [
     HomeApp(),
