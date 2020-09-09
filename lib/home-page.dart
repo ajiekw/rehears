@@ -7,7 +7,7 @@ class HomeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: HomeBody(),
+        body: NavDrawer(),
         backgroundColor: Colors.white,
       ),
     );
@@ -201,6 +201,9 @@ class NavDrawer extends StatelessWidget {
             )
           ],
         ),
+      ),
+      body: Container(
+        child: HomeBody(),
       ),
     );
   }
