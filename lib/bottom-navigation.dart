@@ -10,7 +10,6 @@ class Navigation extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        drawer: NavDrawer(),
         body: BottNavigation(),
       ),
     );

@@ -188,16 +188,37 @@ class NavDrawer extends StatelessWidget {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              child: Text('Rehears'),
+              child: Text(
+                'Rehears',
+                style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white,
+                ),
+              ),
               decoration: BoxDecoration(
                 color: Colors.yellow[700],
               ),
             ),
             ListTile(
+              leading: Icon(Icons.face),
               title: Text('Account'),
+              onTap: () {
+                Navigator.pop(context);
+              },
             ),
             ListTile(
+              leading: Icon(Icons.settings),
               title: Text('Setting'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.power_settings_new),
+              title: Text('Logout'),
+              onTap: () {
+                Navigator.pop(context);
+              },
             )
           ],
         ),

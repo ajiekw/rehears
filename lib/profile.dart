@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rehears/home-page.dart';
-import 'bottom-navigation.dart';
 
 void main() => runApp(Profile());
 
@@ -31,9 +30,26 @@ class ProfileBody extends StatelessWidget {
   }
 }
 
+class Logout extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 43, left: 5),
+      child: Align(
+        alignment: Alignment.topRight,
+        child: Icon(
+          Icons.settings,
+          color: Colors.deepPurple,
+          size: 40,
+        ),
+      ),
+    );
+  }
+}
+
 class ProfileCard extends StatelessWidget {
   @override
-  Widget build(BuildContext) {
+  Widget build(BuildContext context) {
     return Scaffold(
       drawer: NavDrawer(),
       body: Container(
@@ -74,16 +90,24 @@ class ProfileCard extends StatelessWidget {
 class ProfileText extends StatelessWidget {
   @override
   Widget build(BuildContext) {
-    return Container(
-      padding: EdgeInsets.only(top: 40),
-      child: Align(
-        alignment: Alignment.topCenter,
-        child: Text(
-          'John Doe',
-          style: TextStyle(
-            fontSize: 36,
+    return Padding(
+      padding: const EdgeInsets.only(left: 90),
+      child: Row(
+        children: [
+          Container(
+            padding: EdgeInsets.only(top: 40),
+            child: Align(
+              alignment: Alignment.topCenter,
+              child: Text(
+                'John Doe',
+                style: TextStyle(
+                  fontSize: 36,
+                ),
+              ),
+            ),
           ),
-        ),
+          Logout()
+        ],
       ),
     );
   }
