@@ -6,7 +6,27 @@ class SettingProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'Setting',
+            style: TextStyle(color: Colors.black),
+          ),
+          backgroundColor: Colors.white,
+        ),
+      ),
+    );
+  }
+}
+
+class SettingBody extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Setting'),
+        backgroundColor: Colors.white,
+      ),
     );
   }
 }
