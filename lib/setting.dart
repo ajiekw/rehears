@@ -8,12 +8,19 @@ class SettingProfile extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(
+              Icons.arrow_back,
+              color: Colors.black,
+            ),
+          ),
           title: Text(
             'Setting',
             style: TextStyle(color: Colors.black),
           ),
           backgroundColor: Colors.white,
         ),
+        body: SettingBody(),
       ),
     );
   }
@@ -22,10 +29,14 @@ class SettingProfile extends StatelessWidget {
 class SettingBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Setting'),
-        backgroundColor: Colors.white,
+    return Container(
+      child: Column(
+        children: <Widget>[
+          Text(
+            'This is setting',
+            style: TextStyle(fontSize: 30),
+          )
+        ],
       ),
     );
   }
