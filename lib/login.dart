@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(Login());
 
-/// This Widget is the main application widget.
 class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,6 @@ class Login extends StatelessWidget {
   }
 }
 
-// ignore: camel_case_types
 class loginBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

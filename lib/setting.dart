@@ -14,9 +14,7 @@ class SettingProfile extends StatelessWidget {
               Icons.arrow_back,
               color: Colors.black,
             ),
-            onPressed: () {
-              Navigator.of(context).push(_SettingBody());
-            },
+            onPressed: () {},
           ),
           title: Text(
             'Setting',
@@ -46,7 +44,7 @@ class SettingBody extends StatelessWidget {
   }
 }
 
-Route _SettingBody() {
+Route backToProfile() {
   return PageRouteBuilder(
     pageBuilder: (context, animation, secondaryAnimation) => Profile(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
