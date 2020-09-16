@@ -13,6 +13,7 @@ class SettingProfile extends StatelessWidget {
               Icons.arrow_back,
               color: Colors.black,
             ),
+            onPressed: () {},
           ),
           title: Text(
             'Setting',
