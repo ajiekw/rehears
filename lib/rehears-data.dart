@@ -3,16 +3,12 @@ import 'package:flutter/material.dart';
 class RehearsData {
   static final Data = [
     {
-      'name': 'Day One',
-      'value': '30 Exp',
+      'icon': Icons.arrow_right,
+      'text': 'Name',
     },
     {
-      'name': 'Day Two',
-      'value': '30 Exp',
+      'icon': Icons.lock,
+      'text': 'Password',
     },
-    {
-      'name': 'Day Three',
-      'value': '50 Exp',
-    }
   ];
 }

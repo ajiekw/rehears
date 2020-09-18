@@ -92,10 +92,11 @@ class loginBody extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: Container(
-                child: Text(
-              "Forget Password",
-              style: TextStyle(color: Colors.deepPurple[900]),
-            )),
+              child: Text(
+                "Forget Password",
+                style: TextStyle(color: Colors.deepPurple[900]),
+              ),
+            ),
           ),
         ],
       ),
