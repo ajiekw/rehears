@@ -39,11 +39,21 @@ class SettingBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
+      child: ListView(
         children: <Widget>[
-          Text(
-            'This is setting',
-            style: TextStyle(fontSize: 30),
+          ListTile(
+            leading: Icon(
+              Icons.account_circle,
+            ),
+            title: Text('Account'),
+          ),
+          ListTile(
+            leading: Icon(Icons.notifications),
+            title: Text('Notification'),
+          ),
+          ListTile(
+            leading: Icon(Icons.people),
+            title: Text('Invite Friends'),
           )
         ],
       ),
