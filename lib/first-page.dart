@@ -1,18 +1,9 @@
-// Flutter code sample for Form
-
-// This example shows a [Form] with one [TextFormField] to enter an email
-// address and a [RaisedButton] to submit the form. A [GlobalKey] is used here
-// to identify the [Form] and validate input.
-//
-// ![](https://flutter.github.io/assets-for-api-docs/assets/widgets/form.png)
-
 import 'package:flutter/material.dart';
 import 'register-form.dart';
 import 'login.dart';
 
 void main() => runApp(LandingPage());
 
-/// This Widget is the main application widget.
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
